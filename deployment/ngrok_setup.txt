@@ -1,0 +1,17 @@
+Run the app locally from the project root:
+
+  python -m pip install -r requirements.txt
+  python -m streamlit run ui/app.py
+
+In a second terminal, install Ngrok and authenticate it using your own Ngrok
+account token (do not put the token in this repository):
+
+  ngrok config add-authtoken YOUR_NGROK_AUTHTOKEN
+  ngrok http 8501
+
+Open the HTTPS forwarding URL printed by Ngrok. Keep the Streamlit and Ngrok
+terminals running while sharing the link. Press Ctrl+C in both terminals to
+stop the app and public tunnel.
+
+The tunnel is reachable by anyone who has its URL. Do not enter real patient
+identifiers or other private health information. The app does not save inputs.
