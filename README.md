@@ -20,6 +20,7 @@ An end-to-end machine-learning project for exploring the UCI Heart Disease datas
 - [Project workflow](#project-workflow)
 - [Results](#results)
 - [Interactive Streamlit app](#interactive-streamlit-app)
+- [Deploy to Streamlit Community Cloud](#deploy-to-streamlit-community-cloud)
 - [Installation and launch](#installation-and-launch)
 - [Optional Ngrok tunnel](#optional-ngrok-tunnel)
 - [Repository structure](#repository-structure)
@@ -109,6 +110,24 @@ The repository also includes the non-hyperparameter-tuned ROC comparison:
 Additional evaluation artifacts are [`evaluation_metrics_NOT_HyperTuned.csv`](results/evaluation_metrics_NOT_HyperTuned.csv) and [`roc_curve_NOT_HyperTuned.png`](results/roc_curve_NOT_HyperTuned.png).
 
 The PCA notebook documents retaining approximately 95% of explained variance with 12 components from 18 encoded input columns. PCA and clustering views in the app are recomputed for the currently selected cohort and are intended for exploration.
+
+## Deploy to Streamlit Community Cloud
+
+The project is published on GitHub, so it can be deployed directly from the repository:
+
+[![Deploy on Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=ElecSpartan%2FHeart_Disease_Project&branch=main&mainModule=ui%2Fapp.py)
+
+In Streamlit Community Cloud, select **New app** and use:
+
+| Setting | Value |
+|---|---|
+| Repository | `ElecSpartan/Heart_Disease_Project` |
+| Branch | `main` |
+| Main file path | `ui/app.py` |
+
+**Live app:** [Heart Disease Explorer](https://heart-disease-explorer-msproject.streamlit.app/)
+
+The app's dependencies are listed in `requirements.txt`; the model and data files it loads are committed in `models/` and `data/`.
 
 ## Interactive Streamlit app
 
